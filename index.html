@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="game-container p-4 rounded shadow">
+            <h1 class="game-title text-center mb-4">Blackjack</h1>
+
+            <!-- Player Balance -->
+            <div class="balance-area text-center mb-4">
+                <h3 id="player-balance">Balance: $300</h3>
+            </div>
+
+            <!-- Dealer and Player Sections -->
+            <div class="row">
+                <!-- Dealer Section -->
+                <div class="dealer-area p-3 rounded shadow">
+                    <h2 class="text-center">Dealer</h2>
+                    <div class="dealer-cards d-flex flex-wrap justify-content-center" id="dealer-cards"></div>
+                    <div class="dealer-score text-center mt-2" id="dealer-score">Score: 0</div>
+                </div>
+
+                <!-- Player Section -->
+                <div class="player-area p-3 rounded shadow">
+                    <h2 class="text-center">Player</h2>
+                    <div class="player-cards d-flex flex-wrap justify-content-center" id="player-cards"></div>
+                    <div class="player-score text-center mt-2" id="player-score">Score: 0</div>
+                </div>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls text-center my-4">
+                <button id="deal-button" class="btn btn-warning mx-2">Deal</button>
+                <button id="hit-button" class="btn btn-primary mx-2" disabled>Hit</button>
+                <button id="stand-button" class="btn btn-danger mx-2" disabled>Stand</button>
+            </div>
+
+            <!-- Betting Area -->
+            <div class="betting-area p-3 rounded bg-light shadow mt-3">
+                <h3 class="text-center mb-3">Place Your Bet:</h3>
+                <div class="chips text-center">
+                    <button class="chip btn mx-1" data-value="5">$5</button>
+                    <button class="chip btn mx-1" data-value="10">$10</button>
+                    <button class="chip btn mx-1" data-value="20">$20</button>
+                    <button class="chip btn mx-1" data-value="50">$50</button>
+                    <button class="chip btn mx-1" data-value="100">$100</button>
+                </div>
+                <div class="bet-info text-center mt-3" id="bet-info">Bet: $0</div>
+            </div>
+
+            <!-- Game Messages -->
+            <div class="message-area text-center mt-4" id="game-message"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
